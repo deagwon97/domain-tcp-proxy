@@ -1,0 +1,57 @@
+{
+    "name": "subdomain-tcp-proxy",
+    "dockerComposeFile": [
+        "./docker-compose.yml"
+    ],
+    "service": "subdomain-tcp-proxy",
+    "shutdownAction": "stopCompose",
+    "settings": {
+        "eslint.nodePath": "/workdir/web/.yarn/sdks",
+        "prettier.prettierPath": "/workdir/web/node_modules/prettier",
+        "typescript.tsdk": "/workdir/web/.yarn/sdks/typescript/lib",
+        "typescript.enablePromptUseWorkspaceTsdk": true,
+        // "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+        "editor.formatOnPaste": false, // required
+        "editor.formatOnType": false, // required
+        "editor.formatOnSave": true, // optional
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[javascriptreact]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[javascript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[typescript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[typescriptreact]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "autoimport.autoComplete": true,
+        "autoimport.filesToScan": "**/*.{ts,tsx}",
+        "autoimport.spaceBetweenBraces": true,
+        "emmet.triggerExpansionOnTab": true,
+        "[prisma]": {
+            "editor.defaultFormatter": "Prisma.prisma"
+        }
+    },
+    "extensions": [
+        "GitHub.copilot",
+        "ms-vscode.vscode-typescript-next",
+        "arcanis.vscode-zipfs",
+        "rvest.vs-code-prettier-eslint",
+        "esbenp.prettier-vscode",
+        "willstakayama.vscode-nextjs-snippets",
+        "foxundermoon.next-js",
+        "steoates.autoimport",
+        "mhutchie.git-graph",
+        "Prisma.prisma",
+        "Shuyoou.ts-react-snippets",
+        "donjayamanne.githistory",
+        "golang.go"
+    ],
+    "workspaceFolder": "/workdir"
+}
