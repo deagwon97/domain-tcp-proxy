@@ -10,10 +10,12 @@ import (
 	"os/signal"
 	"strconv"
 	"sync"
-	"testing"
 	"time"
+	"bytes"
 	"github.com/gorilla/websocket"
-	"github.com/deagwon97/subdomain-tcp-proxy/proxy-go/lib"
+	"github.com/andreburgaud/crypt2go/ecb"
+	"encoding/hex"
+	"golang.org/x/crypto/blowfish"
 	
 )
 
@@ -22,12 +24,39 @@ const (
 	NUM_REPEAT    = 10000
 	NUM_OF_CLIENT = 100
 	// PACKET_SIZE         = 1024 // minimum 128
-	TUNNEL_HOST_POSTFIX = ".hi:9980"
+	TUNNEL_HOST_POSTFIX = ".service.com:8080"
 )
 
 // var data = make([]byte, PACKET_SIZE)
 
 var upgrader = websocket.Upgrader{} // use default options
+
+
+func main() {
+	TestWebScoket()
+}
+
+func PKCS5Padding(ciphertext []byte, blockSize int) []byte {
+	padding := blockSize - len(ciphertext)%blockSize
+	padtext := bytes.Repeat([]byte{byte(padding)}, padding)
+	return append(ciphertext, padtext...)
+}
+
+
+func EncryptSubdomain(host string) (subDomain string, err error) {
+	key := []byte("thisissecretkey")
+	block, err := blowfish.NewCipher(key)
+	if err != nil {
+		log.Println(err)
+	}
+	mode := ecb.NewECBEncrypter(block)
+	plaintext := []byte(host)
+	plaintext = PKCS5Padding(plaintext, block.BlockSize())
+	ciphertext := make([]byte, len(plaintext))
+	mode.CryptBlocks(ciphertext, plaintext)
+	subDomain = hex.EncodeToString(ciphertext)
+	return subDomain, err
+}
 
 // test http based proxy server performance
 func TestWebScoket() {
@@ -45,9 +74,9 @@ func TestWebScoket() {
 	fmt.Println("Starting client ")
 	waitAllClientsEnd.Add(NUM_OF_CLIENT * NUM_OF_SERVER)
 	for i := 0; i < NUM_OF_CLIENT; i++ {
-		go runClient(waitAllClientsEnd, 1, appHost1, t)
-		go runClient(waitAllClientsEnd, 2, appHost2, t)
-		go runClient(waitAllClientsEnd, 3, appHost3, t)
+		go runClient(waitAllClientsEnd, 1, appHost1)
+		go runClient(waitAllClientsEnd, 2, appHost2)
+		go runClient(waitAllClientsEnd, 3, appHost3)
 	}
 	waitAllClientsEnd.Wait()
 }
@@ -88,14 +117,13 @@ func runServer(waitWebSocketServerReady *sync.WaitGroup, host string) {
 	http.Serve(listener, mux)
 }
 
-func runClient(waitClientEnd *sync.WaitGroup, clientId int, appHost string, t *testing.T) {
+func runClient(waitClientEnd *sync.WaitGroup, clientId int, appHost string) {
 	defer waitClientEnd.Done()
 	interrupt := make(chan os.Signal, 1)
 	signal.Notify(interrupt, os.Interrupt)
-	subdomain, _ := lib.EncryptSubdomain(appHost)
+	subdomain, _ := EncryptSubdomain(appHost)
 	tunnelHost := subdomain + TUNNEL_HOST_POSTFIX
 	fmt.Println("Connecting to " + tunnelHost)
-	t.Log("Connecting to " + tunnelHost)
 	u := url.URL{Scheme: "ws", Host: tunnelHost, Path: "/echo"}
 	c, _, err := websocket.DefaultDialer.Dial(u.String(), nil)
 
@@ -171,7 +199,7 @@ func runClient(waitClientEnd *sync.WaitGroup, clientId int, appHost string, t *t
 	waitSendRecieveMessageMap.Wait()
 	fmt.Printf("%d) recvMap %d \n", clientId, len(recvMap))
 	fmt.Printf("%d) sendMap %d \n", clientId, len(sendMap))
-	t.Logf("%d) recvMap %d \n", clientId, len(recvMap))
+	
 
 	if len(recvMap) != len(sendMap) {
 		fmt.Printf("not equal %d %d \n", len(recvMap), len(sendMap))
@@ -184,10 +212,10 @@ func runClient(waitClientEnd *sync.WaitGroup, clientId int, appHost string, t *t
 		}
 	}
 	fmt.Printf("success %d \n", clientId)
-	t.Logf("success %d \n", clientId)
+	
 }
 
-// var addr = flag.String("addr", "7a4fe220e12bb0c312a47e3885990a10.hi:7642", "http service address")
+// var addr = flag.String("addr", "7a4fe220e12bb0c312a47e3885990a10.service.com:7642", "http service address")
 // func main() {
 // 	res, _ := lib.EncryptSubdomain("0.0.0.0:8080")
 // 	fmt.Println(res)

@@ -16,4 +16,7 @@ go build .
 ./proxy-go
 
 # proxy-test
+cd ~
+cd proxy-test
+
 ```
