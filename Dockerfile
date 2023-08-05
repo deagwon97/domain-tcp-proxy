@@ -14,3 +14,8 @@ ENV GO111MODULE=on \
     GOOS=linux
 RUN echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.bashrc
 
+RUN cat  << EOF >> /etc/hosts
+0.0.0.0  7a4fe220e12bb0c312a47e3885990a10.service.com
+0.0.0.0  7a4fe220e12bb0c3ba67abb5cef3a8c0.service.com
+0.0.0.0  7a4fe220e12bb0c344cb29f16bbff67a.service.com
+EOF
