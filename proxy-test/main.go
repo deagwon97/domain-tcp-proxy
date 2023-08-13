@@ -1,6 +1,9 @@
 package main
 
 import (
+	"bufio"
+	"bytes"
+	"encoding/hex"
 	"fmt"
 	"log"
 	"net"
@@ -9,28 +12,24 @@ import (
 	"os"
 	"os/signal"
 	"strconv"
+	"strings"
 	"sync"
 	"time"
-	"bytes"
-	"github.com/gorilla/websocket"
+
 	"github.com/andreburgaud/crypt2go/ecb"
-	"encoding/hex"
+	"github.com/gorilla/websocket"
 	"golang.org/x/crypto/blowfish"
-	
 )
 
 const (
 	NUM_OF_SERVER = 3 // fixed
-	NUM_REPEAT    = 10000
+	NUM_REPEAT    = 100
 	NUM_OF_CLIENT = 100
 	// PACKET_SIZE         = 1024 // minimum 128
 	TUNNEL_HOST_POSTFIX = ".service.com:8080"
 )
 
-// var data = make([]byte, PACKET_SIZE)
-
 var upgrader = websocket.Upgrader{} // use default options
-
 
 func main() {
 	TestWebScoket()
@@ -41,7 +40,6 @@ func PKCS5Padding(ciphertext []byte, blockSize int) []byte {
 	padtext := bytes.Repeat([]byte{byte(padding)}, padding)
 	return append(ciphertext, padtext...)
 }
-
 
 func EncryptSubdomain(host string) (subDomain string, err error) {
 	key := []byte("thisissecretkey")
@@ -58,6 +56,56 @@ func EncryptSubdomain(host string) (subDomain string, err error) {
 	return subDomain, err
 }
 
+func hostExists(host string) (bool, error) {
+	file, err := os.Open("/etc/hosts")
+	if err != nil {
+		return false, err
+	}
+	defer file.Close()
+
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		line := scanner.Text()
+		if strings.Contains(line, host) {
+			return true, nil
+		}
+	}
+
+	if err := scanner.Err(); err != nil {
+		return false, err
+	}
+
+	return false, nil
+}
+
+func addHostEntry(host, ip, port string) error {
+	entry := fmt.Sprintf("%s\t%s:%s", ip, host, port)
+
+	// Check if the entry already exists in the hosts file
+	hostsFile, err := os.ReadFile("/etc/hosts")
+	if err != nil {
+		return err
+	}
+
+	if strings.Contains(string(hostsFile), entry) {
+		return fmt.Errorf("Entry already exists in /etc/hosts")
+	}
+
+	// Append the new entry to the hosts file
+	file, err := os.OpenFile("/etc/hosts", os.O_APPEND|os.O_WRONLY, 0644)
+	if err != nil {
+		return err
+	}
+	defer file.Close()
+
+	_, err = fmt.Fprintln(file, entry)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
 // test http based proxy server performance
 func TestWebScoket() {
 	waitWebSocketServerReady := &sync.WaitGroup{}
@@ -69,6 +117,9 @@ func TestWebScoket() {
 	go runServer(waitWebSocketServerReady, appHost2)
 	appHost3 := "0.0.0.0:8082"
 	go runServer(waitWebSocketServerReady, appHost3)
+
+	sub1 := EncryptSubdomain("appHost1")
+
 	waitWebSocketServerReady.Wait()
 	waitAllClientsEnd := &sync.WaitGroup{}
 	fmt.Println("Starting client ")
@@ -199,7 +250,6 @@ func runClient(waitClientEnd *sync.WaitGroup, clientId int, appHost string) {
 	waitSendRecieveMessageMap.Wait()
 	fmt.Printf("%d) recvMap %d \n", clientId, len(recvMap))
 	fmt.Printf("%d) sendMap %d \n", clientId, len(sendMap))
-	
 
 	if len(recvMap) != len(sendMap) {
 		fmt.Printf("not equal %d %d \n", len(recvMap), len(sendMap))
@@ -212,7 +262,7 @@ func runClient(waitClientEnd *sync.WaitGroup, clientId int, appHost string) {
 		}
 	}
 	fmt.Printf("success %d \n", clientId)
-	
+
 }
 
 // var addr = flag.String("addr", "7a4fe220e12bb0c312a47e3885990a10.service.com:7642", "http service address")

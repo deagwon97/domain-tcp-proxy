@@ -27,7 +27,6 @@
                 "prettier.prettierPath": "/workdir/web/node_modules/prettier",
                 "typescript.tsdk": "/workdir/web/.yarn/sdks/typescript/lib",
                 "typescript.enablePromptUseWorkspaceTsdk": true,
-                // "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
                 "editor.formatOnPaste": false, // required
                 "editor.formatOnType": false, // required
                 "editor.formatOnSave": true, // optional
