@@ -15,8 +15,8 @@ func recoverer(f func()) {
 }
 
 func runProxy() {
-	fmt.Println("run proxy server")
-	proxyHost := "0.0.0.0:8080"
+	proxyHost := "0.0.0.0:9980"
+	fmt.Printf("proxy server start on %s ...\n", proxyHost)
 	s := proxy.NewServer(proxyHost)
 	s.Start()
 	defer s.Stop()
@@ -24,6 +24,7 @@ func runProxy() {
 }
 
 func main() {
-	recoverer(runProxy)
+	// go recoverer(api.EncryptSubdomainApi)
+	go recoverer(runProxy)
 	select {}
 }
