@@ -111,5 +111,5 @@ const midServer = net.createServer(async (midSocket) => {
 });
 
 midServer.listen(9980, () => {
-  // console.log(`run mid server 9980`);
+  console.log(`run mid server 9980`);
 });

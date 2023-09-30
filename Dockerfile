@@ -6,9 +6,9 @@ RUN apt-get update -y  &&\
       npm install -g npm@9.3.1 &&\
       npm install --global yarn --force 
 
-# install go 1.20.7
-RUN wget -c https://go.dev/dl/go1.20.7.linux-amd64.tar.gz && \
-    rm -rf /usr/local/go && tar -C /usr/local -xzf go1.20.7.linux-amd64.tar.gz
+# install go 1.20.6
+RUN wget -c https://go.dev/dl/go1.20.6.linux-amd64.tar.gz && \
+    rm -rf /usr/local/go && tar -C /usr/local -xzf go1.20.6.linux-amd64.tar.gz
 ENV GO111MODULE=on \
     CGO_ENABLED=0 \
     GOOS=linux

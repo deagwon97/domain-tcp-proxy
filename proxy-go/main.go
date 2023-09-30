@@ -24,7 +24,6 @@ func runProxy() {
 }
 
 func main() {
-	// go recoverer(api.EncryptSubdomainApi)
 	go recoverer(runProxy)
 	select {}
 }
