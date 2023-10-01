@@ -1,0 +1,364 @@
+2023/10/01 07:18:12 [error] 22192#0: *1 lua entry thread aborted: runtime error: error loading module 'blowfish' from file '/usr/local/lib/lua/5.1/blowfish.so':
+	/usr/local/lib/lua/5.1/blowfish.so:1: unexpected symbol near 'char(127)'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	rewrite_by_lua(nginx.conf:41):2: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 07:21:32 [error] 22987#0: *1 lua entry thread aborted: runtime error: error loading module 'blowfish' from file '/usr/local/lib/lua/5.1/blowfish.so':
+	/usr/local/lib/lua/5.1/blowfish.so:1: unexpected symbol near 'char(127)'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	rewrite_by_lua(nginx.conf:41):2: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:07:18 [error] 11171#0: *1 lua entry thread aborted: runtime error: rewrite_by_lua(nginx.conf:41):2: module 'blowfish' not found:
+	no field package.preload['blowfish']
+	no file './blowfish.lua'
+	no file '/usr/local/share/lua/5.1/blowfish.lua'
+	no file '/usr/local/share/lua/5.1/blowfish/init.lua'
+	no file '/usr/local/lib/lua/5.1/blowfish.lua'
+	no file '/usr/local/lib/lua/5.1/blowfish/init.lua'
+	no file '/usr/share/lua/5.1/blowfish.lua'
+	no file '/usr/share/lua/5.1/blowfish/init.lua
+./blowfish.so'
+	no file '/usr/local/lib/lua/5.1/blowfish.so'
+	no file '/usr/lib/x86_64-linux-gnu/lua/5.1/blowfish.so'
+	no file '/usr/lib/lua/5.1/blowfish.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+	no file './blowfish.so'
+	no file '/usr/local/lib/lua/5.1/blowfish.so'
+	no file '/usr/lib/x86_64-linux-gnu/lua/5.1/blowfish.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	rewrite_by_lua(nginx.conf:41):2: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:10:17 [error] 12339#0: *1 lua entry thread aborted: runtime error: rewrite_by_lua(nginx.conf:41):2: module 'blowfish' not found:
+	no field package.preload['blowfish']
+	no file './blowfish.lua'
+	no file '/usr/local/share/lua/5.1/blowfish.lua'
+	no file '/usr/local/share/lua/5.1/blowfish/init.lua'
+	no file '/usr/local/lib/lua/5.1/blowfish.lua'
+	no file '/usr/local/lib/lua/5.1/blowfish/init.lua'
+	no file '/usr/share/lua/5.1/blowfish.lua'
+	no file '/usr/share/lua/5.1/blowfish/init.lua
+./blowfish.so'
+	no file '/usr/local/lib/lua/5.1/blowfish.so'
+	no file '/usr/lib/x86_64-linux-gnu/lua/5.1/blowfish.so'
+	no file '/usr/lib/lua/5.1/blowfish.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+	no file './blowfish.so'
+	no file '/usr/local/lib/lua/5.1/blowfish.so'
+	no file '/usr/lib/x86_64-linux-gnu/lua/5.1/blowfish.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	rewrite_by_lua(nginx.conf:41):2: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:11:03 [error] 12646#0: *1 lua entry thread aborted: runtime error: rewrite_by_lua(nginx.conf:41):2: module 'blowfish' not found:
+	no field package.preload['blowfish']
+	no file './blowfish.lua'
+	no file '/usr/local/share/lua/5.1/blowfish.lua'
+	no file '/usr/local/share/lua/5.1/blowfish/init.lua'
+	no file '/usr/local/lib/lua/5.1/blowfish.lua'
+	no file '/usr/local/lib/lua/5.1/blowfish/init.lua'
+	no file '/usr/share/lua/5.1/blowfish.lua'
+	no file '/usr/share/lua/5.1/blowfish/init.lua
+./blowfish.so'
+	no file '/usr/local/lib/lua/5.1/blowfish.so'
+	no file '/usr/lib/x86_64-linux-gnu/lua/5.1/blowfish.so'
+	no file '/usr/lib/lua/5.1/blowfish.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+	no file './blowfish.so'
+	no file '/usr/local/lib/lua/5.1/blowfish.so'
+	no file '/usr/lib/x86_64-linux-gnu/lua/5.1/blowfish.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	rewrite_by_lua(nginx.conf:41):2: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:12:58 [error] 13217#0: *1 lua entry thread aborted: runtime error: error loading module 'blowfish' from file '/usr/local/lib/lua/5.1/blowfish.so':
+	/usr/local/lib/lua/5.1/blowfish.so:1: unexpected symbol near 'char(127)'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	rewrite_by_lua(nginx.conf:41):2: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:22:34 [error] 17294#0: *1 [lua] rewrite_by_lua(nginx.conf:41):48: try to'‹SˆXÃ¦˜å{Ç$ý?nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:22:34 [error] 17294#0: *1 no resolver defined to resolve '‹SˆXÃ¦˜å{Ç$ý, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:23:57 [error] 17699#0: *1 [lua] rewrite_by_lua(nginx.conf:41):25: decode(): subdomainzOâ á+°Ãû—i¬A„K, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:23:57 [error] 17699#0: *1 [lua] rewrite_by_lua(nginx.conf:41):27: decode(): decoded'‹SˆXÃ¦˜å{Ç$ý?, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:23:57 [error] 17699#0: *1 [lua] rewrite_by_lua(nginx.conf:41):50: try to'‹SˆXÃ¦˜å{Ç$ý?nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:23:57 [error] 17699#0: *1 no resolver defined to resolve '‹SˆXÃ¦˜å{Ç$ý, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:24:36 [error] 17914#0: *1 [lua] rewrite_by_lua(nginx.conf:41):25: decode(): subdomain!!
+7a4fe220e12bb0c3fb971e69ac41844b, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:24:36 [error] 17914#0: *1 [lua] rewrite_by_lua(nginx.conf:41):27: decode(): decoded!!
+'‹SˆXÃ¦˜å{Ç$ý?, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:24:36 [error] 17914#0: *1 [lua] rewrite_by_lua(nginx.conf:41):50: try to'‹SˆXÃ¦˜å{Ç$ý?nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:24:36 [error] 17914#0: *1 no resolver defined to resolve '‹SˆXÃ¦˜å{Ç$ý, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:26:07 [error] 18267#0: *2 [lua] rewrite_by_lua(nginx.conf:41):23: decode(): subdomai7a4fe220e12bb0c3fb971e69ac41844b, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:26:07 [error] 18267#0: *2 [lua] rewrite_by_lua(nginx.conf:41):52: try to'‹SˆXÃ¦˜å{Ç$ý?nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:26:07 [error] 18267#0: *2 no resolver defined to resolve '‹SˆXÃ¦˜å{Ç$ý, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:26:26 [error] 18267#0: *3 [lua] rewrite_by_lua(nginx.conf:41):23: decode(): subdomai7a4fe220e12bb0c3fb971e69ac41844b, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:26:26 [error] 18267#0: *3 [lua] rewrite_by_lua(nginx.conf:41):52: try to'‹SˆXÃ¦˜å{Ç$ý?nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:26:26 [error] 18267#0: *3 no resolver defined to resolve '‹SˆXÃ¦˜å{Ç$ý, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:30:01 [error] 20372#0: *4 [lua] rewrite_by_lua(nginx.conf:41):34: decode(): subdomai7a4fe220e12bb0c3fb971e69ac41844b, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:30:01 [error] 20372#0: *4 [lua] rewrite_by_lua(nginx.conf:41):63: try to'SX{$?nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:30:01 [error] 20372#0: *4 no resolver defined to resolve 'SX{$, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:30:45 [error] 20609#0: *5 [lua] rewrite_by_lua(nginx.conf:41):34: decode(): subdomai!!7a4fe220e12bb0c3fb971e69ac41844b, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:30:45 [error] 20609#0: *5 [lua] rewrite_by_lua(nginx.conf:41):40: decode(): deciphered!!'‹SˆXÃ¦˜å{Ç$ý?, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:30:45 [error] 20609#0: *5 [lua] rewrite_by_lua(nginx.conf:41):63: try to'‹SˆXÃ¦˜å{Ç$ý?nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:30:45 [error] 20609#0: *5 no resolver defined to resolve '‹SˆXÃ¦˜å{Ç$ý, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:33:38 [error] 21224#0: *6 [lua] rewrite_by_lua(nginx.conf:41):43: decode(): subdomai!!7a4fe220e12bb0c3fb971e69ac41844b, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:33:38 [error] 21224#0: *6 lua entry thread aborted: runtime error: rewrite_by_lua(nginx.conf:41):35: attempt to compare string with number
+stack traceback:
+coroutine 0:
+	rewrite_by_lua(nginx.conf:41): in function 'adjustKeyLength'
+	rewrite_by_lua(nginx.conf:41):48: in function 'decode'
+	rewrite_by_lua(nginx.conf:41):66: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:34:12 [error] 21461#0: *7 [lua] rewrite_by_lua(nginx.conf:41):35: decode(): subdomai!!7a4fe220e12bb0c3fb971e69ac41844b, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:34:12 [error] 21461#0: *7 [lua] rewrite_by_lua(nginx.conf:41):41: decode(): deciphered!!'‹SˆXÃ¦˜å{Ç$ý?, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:34:12 [error] 21461#0: *7 [lua] rewrite_by_lua(nginx.conf:41):64: try to'‹SˆXÃ¦˜å{Ç$ý?nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:34:12 [error] 21461#0: *7 no resolver defined to resolve '‹SˆXÃ¦˜å{Ç$ý, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:36:14 [error] 21919#0: *8 [lua] rewrite_by_lua(nginx.conf:41):45: decode(): subdomai!!7a4fe220e12bb0c3fb971e69ac41844b, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:36:14 [error] 21919#0: *8 [lua] rewrite_by_lua(nginx.conf:41):52: decode(): deciphered!!'‹SˆXÃ¦˜å{Ç$ý?, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:36:14 [error] 21919#0: *8 [lua] rewrite_by_lua(nginx.conf:41):75: try to'‹SˆXÃ¦˜å{Ç$ý?nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:36:14 [error] 21919#0: *8 no resolver defined to resolve '‹SˆXÃ¦˜å{Ç$ý, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:47:30 [error] 24833#0: *9 lua entry thread aborted: runtime error: error loading module 'blowfish' from file '/usr/local/lib/lua/5.1/blowfish.so':
+	/usr/local/lib/lua/5.1/blowfish.so:1: unexpected symbol near 'char(127)'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	rewrite_by_lua(nginx.conf:41):2: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:48:05 [error] 25157#0: *10 lua entry thread aborted: runtime error: error loading module 'blowfish' from file '/usr/lib/x86_64-linux-gnu/lua/5.1/blowfish.so':
+	/usr/lib/x86_64-linux-gnu/lua/5.1/blowfish.so:1: unexpected symbol near 'char(127)'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	rewrite_by_lua(nginx.conf:41):2: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:48:23 [error] 25341#0: *11 lua entry thread aborted: runtime error: rewrite_by_lua(nginx.conf:41):2: module 'blowfish' not found:
+	no field package.preload['blowfish']
+	no file './blowfish.lua'
+	no file '/usr/local/share/lua/5.1/blowfish.lua'
+	no file '/usr/local/share/lua/5.1/blowfish/init.lua'
+	no file '/usr/local/lib/lua/5.1/blowfish.lua'
+	no file '/usr/local/lib/lua/5.1/blowfish/init.lua'
+	no file '/usr/share/lua/5.1/blowfish.lua'
+	no file '/usr/share/lua/5.1/blowfish/init.lua
+./blowfish.so'
+	no file '/usr/local/lib/lua/5.1/blowfish.so'
+	no file '/usr/lib/x86_64-linux-gnu/lua/5.1/blowfish.so'
+	no file '/usr/lib/lua/5.1/blowfish.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+	no file './blowfish.so'
+	no file '/usr/local/lib/lua/5.1/blowfish.so'
+	no file '/usr/lib/x86_64-linux-gnu/lua/5.1/blowfish.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	rewrite_by_lua(nginx.conf:41):2: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 09:53:42 [error] 27583#0: *12 lua entry thread aborted: runtime error: error loading module 'blowfish' from file '/usr/lib/x86_64-linux-gnu/lua/5.1/blowfish.so':
+	/usr/lib/x86_64-linux-gnu/lua/5.1/blowfish.so:1: unexpected symbol near 'char(127)'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	rewrite_by_lua(nginx.conf:41):2: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:15:19 [error] 51396#0: *1 lua entry thread aborted: runtime error: rewrite_by_lua(nginx.conf:41):2: module 'resty.nettle.blowfish' not found:
+	no field package.preload['resty.nettle.blowfish']
+	no file './resty/nettle/blowfish.lua'
+	no file '/usr/local/share/lua/5.1/resty/nettle/blowfish.lua'
+	no file '/usr/local/share/lua/5.1/resty/nettle/blowfish/init.lua'
+	no file '/usr/local/lib/lua/5.1/resty/nettle/blowfish.lua'
+	no file '/usr/local/lib/lua/5.1/resty/nettle/blowfish/init.lua'
+	no file '/usr/share/lua/5.1/resty/nettle/blowfish.lua'
+	no file '/usr/share/lua/5.1/resty/nettle/blowfish/init.lua
+./resty/nettle/blowfish.so'
+	no file '/usr/local/lib/lua/5.1/resty/nettle/blowfish.so'
+	no file '/usr/lib/x86_64-linux-gnu/lua/5.1/resty/nettle/blowfish.so'
+	no file '/usr/lib/lua/5.1/resty/nettle/blowfish.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+	no file './resty/nettle/blowfish.so'
+	no file '/usr/local/lib/lua/5.1/resty/nettle/blowfish.so'
+	no file '/usr/lib/x86_64-linux-gnu/lua/5.1/resty/nettle/blowfish.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+	no file './resty.so'
+	no file '/usr/local/lib/lua/5.1/resty.so'
+	no file '/usr/lib/x86_64-linux-gnu/lua/5.1/resty.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	rewrite_by_lua(nginx.conf:41):2: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:19:04 [error] 52749#0: *2 lua entry thread aborted: runtime error: rewrite_by_lua(nginx.conf:41):3: module 'resty.string' not found:
+	no field package.preload['resty.string']
+	no file './resty/string.lua'
+	no file '/usr/local/share/lua/5.1/resty/string.lua'
+	no file '/usr/local/share/lua/5.1/resty/string/init.lua'
+	no file '/usr/local/lib/lua/5.1/resty/string.lua'
+	no file '/usr/local/lib/lua/5.1/resty/string/init.lua'
+	no file '/usr/share/lua/5.1/resty/string.lua'
+	no file '/usr/share/lua/5.1/resty/string/init.lua
+./resty/string.so'
+	no file '/usr/local/lib/lua/5.1/resty/string.so'
+	no file '/usr/lib/x86_64-linux-gnu/lua/5.1/resty/string.so'
+	no file '/usr/lib/lua/5.1/resty/string.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+	no file './resty/string.so'
+	no file '/usr/local/lib/lua/5.1/resty/string.so'
+	no file '/usr/lib/x86_64-linux-gnu/lua/5.1/resty/string.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+	no file './resty.so'
+	no file '/usr/local/lib/lua/5.1/resty.so'
+	no file '/usr/lib/x86_64-linux-gnu/lua/5.1/resty.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+stack traceback:
+coroutine 0:
+	[C]: in function 'require'
+	rewrite_by_lua(nginx.conf:41):3: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:23:13 [error] 54257#0: *3 lua entry thread aborted: runtime error: rewrite_by_lua(nginx.conf:41):8: attempt to call field 'from_hex' (a nil value)
+stack traceback:
+coroutine 0:
+	rewrite_by_lua(nginx.conf:41): in function 'decrypt'
+	rewrite_by_lua(nginx.conf:41):15: in function 'decode'
+	rewrite_by_lua(nginx.conf:41):32: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:25:06 [error] 54676#0: *4 lua entry thread aborted: runtime error: rewrite_by_lua(nginx.conf:41):16: attempt to call method 'iv' (a nil value)
+stack traceback:
+coroutine 0:
+	rewrite_by_lua(nginx.conf:41): in function 'decrypt'
+	rewrite_by_lua(nginx.conf:41):21: in function 'decode'
+	rewrite_by_lua(nginx.conf:41):38: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:26:27 [error] 55055#0: *5 lua entry thread aborted: runtime error: rewrite_by_lua(nginx.conf:41):16: attempt to index global 'resty_string' (a nil value)
+stack traceback:
+coroutine 0:
+	rewrite_by_lua(nginx.conf:41): in function 'decrypt'
+	rewrite_by_lua(nginx.conf:41):22: in function 'decode'
+	rewrite_by_lua(nginx.conf:41):39: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:27:05 [error] 55269#0: *6 lua entry thread aborted: runtime error: rewrite_by_lua(nginx.conf:41):16: attempt to index global 'resty_random' (a nil value)
+stack traceback:
+coroutine 0:
+	rewrite_by_lua(nginx.conf:41): in function 'decrypt'
+	rewrite_by_lua(nginx.conf:41):22: in function 'decode'
+	rewrite_by_lua(nginx.conf:41):39: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:28:08 [error] 55543#0: *7 failed to load inlined Lua code: rewrite_by_lua(nginx.conf:41):4: '=' expected near 'resty_random', client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:28:55 [error] 55805#0: *8 failed to load inlined Lua code: rewrite_by_lua(nginx.conf:41):4: '=' expected near 'resty_random', client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:29:12 [error] 55944#0: *9 failed to load inlined Lua code: rewrite_by_lua(nginx.conf:41):4: '=' expected near 'restyrandom', client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:30:19 [error] 56239#0: *10 lua entry thread aborted: runtime error: /usr/local/lib/lua/5.1/resty/nettle/blowfish.lua:40: attempt to perform arithmetic on local 'len' (a string value)
+stack traceback:
+coroutine 0:
+	/usr/local/lib/lua/5.1/resty/nettle/blowfish.lua: in function 'decrypt'
+	rewrite_by_lua(nginx.conf:41):30: in function 'decrypt'
+	rewrite_by_lua(nginx.conf:41):35: in function 'decode'
+	rewrite_by_lua(nginx.conf:41):52: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:32:40 [error] 56762#0: *11 lua entry thread aborted: runtime error: /usr/local/lib/lua/5.1/resty/nettle/blowfish.lua:40: attempt to perform arithmetic on local 'len' (a string value)
+stack traceback:
+coroutine 0:
+	/usr/local/lib/lua/5.1/resty/nettle/blowfish.lua: in function 'decrypt'
+	rewrite_by_lua(nginx.conf:41):30: in function 'decrypt'
+	rewrite_by_lua(nginx.conf:41):35: in function 'decode'
+	rewrite_by_lua(nginx.conf:41):52: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:37:51 [error] 57786#0: *12 [lua] rewrite_by_lua(nginx.conf:41):48: try to0.0.0.0nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:37:51 [error] 57786#0: *12 invalid port in upstream "0.0.0.0:", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:37:58 [error] 57786#0: *13 [lua] rewrite_by_lua(nginx.conf:41):48: try to0.0.0.0nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:37:58 [error] 57786#0: *13 invalid port in upstream "0.0.0.0:", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:38:35 [error] 58048#0: *14 [lua] rewrite_by_lua(nginx.conf:41):28: decode(): decrypted_text==>0.0.0.0:7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:38:35 [error] 58048#0: *14 invalid port in upstream "0.0.0.0:", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:38:40 [error] 58048#0: *15 [lua] rewrite_by_lua(nginx.conf:41):28: decode(): decrypted_text==>0.0.0.0:7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:38:40 [error] 58048#0: *15 invalid port in upstream "0.0.0.0:", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:38:41 [error] 58048#0: *16 [lua] rewrite_by_lua(nginx.conf:41):28: decode(): decrypted_text==>0.0.0.0:7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:38:41 [error] 58048#0: *16 invalid port in upstream "0.0.0.0:", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:40:15 [error] 58511#0: *17 [lua] rewrite_by_lua(nginx.conf:41):33: decode(): decrypted_text==>nilnil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:40:15 [error] 58511#0: *17 invalid port in upstream "0.0.0.0:", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:41:00 [error] 58749#0: *18 [lua] rewrite_by_lua(nginx.conf:41):35: decode(): decrypted_text==>nilnil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:41:00 [error] 58749#0: *18 invalid port in upstream "0.0.0.0:", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:41:01 [error] 58749#0: *19 [lua] rewrite_by_lua(nginx.conf:41):35: decode(): decrypted_text==>nilnil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:41:01 [error] 58749#0: *19 invalid port in upstream "0.0.0.0:", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:41:02 [error] 58749#0: *20 [lua] rewrite_by_lua(nginx.conf:41):35: decode(): decrypted_text==>nilnil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:41:02 [error] 58749#0: *20 invalid port in upstream "0.0.0.0:", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:42:06 [error] 59071#0: *21 [lua] rewrite_by_lua(nginx.conf:41):35: decode(): decrypted_text==>nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:42:06 [error] 59071#0: *21 invalid port in upstream "0.0.0.0:", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:42:25 [error] 59260#0: *22 [lua] rewrite_by_lua(nginx.conf:41):35: decode(): decrypted_text==>nilnil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:42:25 [error] 59260#0: *22 invalid port in upstream "0.0.0.0:", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:42:28 [error] 59260#0: *23 [lua] rewrite_by_lua(nginx.conf:41):35: decode(): decrypted_text==>nilnil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:42:28 [error] 59260#0: *23 invalid port in upstream "0.0.0.0:", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:42:56 [error] 59523#0: *24 [lua] rewrite_by_lua(nginx.conf:41):35: decode(): decrypted_text==>0.0.0.0:7080nilnil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:42:56 [error] 59523#0: *24 invalid port in upstream "0.0.0.0:", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:43:31 [error] 59752#0: *25 failed to load inlined Lua code: rewrite_by_lua(nginx.conf:41):34: unexpected symbol near '#', client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:43:46 [error] 59873#0: *26 [lua] rewrite_by_lua(nginx.conf:41):42: decode(): decrypted_text==>0.0.0.0:70800.0.0.0nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:43:46 [error] 59873#0: *26 invalid port in upstream "0.0.0.0:", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:45:26 [error] 60258#0: *27 [lua] rewrite_by_lua(nginx.conf:41):46: decode(): decrypted_text==>nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:45:26 [error] 60258#0: *27 invalid port in upstream ":", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:45:33 [error] 60258#0: *28 [lua] rewrite_by_lua(nginx.conf:41):46: decode(): decrypted_text==>nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:45:33 [error] 60258#0: *28 invalid port in upstream ":", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:47:22 [error] 60786#0: *29 lua entry thread aborted: runtime error: rewrite_by_lua(nginx.conf:41):36: bad argument #2 to 'log' (string, number, boolean, or nil expected, got function)
+stack traceback:
+coroutine 0:
+	[C]: in function 'log'
+	rewrite_by_lua(nginx.conf:41):36: in function 'decode'
+	rewrite_by_lua(nginx.conf:41):48: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:48:11 [error] 61063#0: *30 lua entry thread aborted: runtime error: rewrite_by_lua(nginx.conf:41):32: bad argument #2 to 'log' (string, number, boolean, or nil expected, got function)
+stack traceback:
+coroutine 0:
+	[C]: in function 'log'
+	rewrite_by_lua(nginx.conf:41):32: in function 'decode'
+	rewrite_by_lua(nginx.conf:41):47: in function <rewrite_by_lua(nginx.conf:41):1>, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:48:30 [error] 61202#0: *31 [lua] rewrite_by_lua(nginx.conf:41):32: decode(): decrypted_text==>0.0.0.0:7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:48:30 [error] 61202#0: *31 invalid port in upstream ":", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:49:03 [error] 61202#0: *32 [lua] rewrite_by_lua(nginx.conf:41):32: decode(): decrypted_text==>0.0.0.0:7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:49:03 [error] 61202#0: *32 invalid port in upstream ":", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:49:06 [error] 61202#0: *33 [lua] rewrite_by_lua(nginx.conf:41):32: decode(): decrypted_text==>0.0.0.0:7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:49:06 [error] 61202#0: *33 invalid port in upstream ":", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:50:56 [error] 61847#0: *34 [lua] rewrite_by_lua(nginx.conf:41):32: decode(): decrypted_text==>0.0.0.0:7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:50:56 [error] 61847#0: *34 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:52:25 [error] 62253#0: *35 [lua] rewrite_by_lua(nginx.conf:41):32: decode(): decrypted_text==>0.0.0.0:7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:52:25 [error] 62253#0: *35 invalid URL prefix in "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:54:38 [error] 62797#0: *36 [lua] rewrite_by_lua(nginx.conf:41):32: decode(): decrypted_text==>0.0.0.0:7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 11:54:38 [error] 62797#0: *36 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:00:48 [error] 63983#0: *37 [lua] access_by_lua(nginx.conf:41):32: decode(): decrypted_text==>0.0.0.0:7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:00:48 [error] 63983#0: *37 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:00:53 [error] 63983#0: *38 [lua] access_by_lua(nginx.conf:41):32: decode(): decrypted_text==>0.0.0.0:7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:00:53 [error] 63983#0: *38 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:00:54 [error] 63983#0: *39 [lua] access_by_lua(nginx.conf:41):32: decode(): decrypted_text==>0.0.0.0:7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:00:54 [error] 63983#0: *39 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:00:55 [error] 63983#0: *40 [lua] access_by_lua(nginx.conf:41):32: decode(): decrypted_text==>0.0.0.0:7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:00:55 [error] 63983#0: *40 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:00:56 [error] 63983#0: *41 [lua] access_by_lua(nginx.conf:41):32: decode(): decrypted_text==>0.0.0.0:7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:00:56 [error] 63983#0: *41 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:00:57 [error] 63983#0: *42 [lua] access_by_lua(nginx.conf:41):32: decode(): decrypted_text==>0.0.0.0:7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:00:57 [error] 63983#0: *42 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:03:32 [error] 64698#0: *43 invalid URL prefix in "http://", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:04:20 [error] 64915#0: *44 [lua] access_by_lua(nginx.conf:40):49: backend==>nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:04:20 [error] 64915#0: *44 invalid URL prefix in "http://", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:04:21 [error] 64915#0: *45 [lua] access_by_lua(nginx.conf:40):49: backend==>nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:04:21 [error] 64915#0: *45 invalid URL prefix in "http://", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:04:22 [error] 64915#0: *46 [lua] access_by_lua(nginx.conf:40):49: backend==>nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:04:22 [error] 64915#0: *46 invalid URL prefix in "http://", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:04:28 [error] 65057#0: *47 [lua] access_by_lua(nginx.conf:40):49: backend==>nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:04:28 [error] 65057#0: *47 invalid URL prefix in "http://", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:04:55 [error] 65235#0: *48 [lua] access_by_lua(nginx.conf:40):49: backend==>nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:04:55 [error] 65235#0: *48 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", upstream: "http://0.0.0.0:80/echo", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:05:25 [error] 65235#0: *50 [lua] access_by_lua(nginx.conf:40):49: backend==>nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:05:25 [error] 65235#0: *50 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", upstream: "http://0.0.0.0:80/echo", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:05:26 [error] 65235#0: *52 [lua] access_by_lua(nginx.conf:40):49: backend==>nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:05:26 [error] 65235#0: *52 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", upstream: "http://0.0.0.0:80/echo", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:05:28 [error] 65235#0: *54 [lua] access_by_lua(nginx.conf:40):49: backend==>nil, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:05:28 [error] 65235#0: *54 connect() failed (111: Connection refused) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", upstream: "http://0.0.0.0:80/echo", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:06:10 [error] 65707#0: *56 [lua] rewrite_by_lua(nginx.conf:42):32: decode(): decrypted_text==>0.0.0.0:7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:06:10 [error] 65707#0: *56 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:06:41 [error] 65879#0: *57 [lua] rewrite_by_lua(nginx.conf:42):36: decode(): decrypted_text==>0.0.0.0, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:06:41 [error] 65879#0: *57 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:06:56 [error] 65879#0: *58 [lua] rewrite_by_lua(nginx.conf:42):36: decode(): decrypted_text==>0.0.0.0, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:06:56 [error] 65879#0: *58 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:07:00 [error] 65879#0: *59 [lua] rewrite_by_lua(nginx.conf:42):36: decode(): decrypted_text==>0.0.0.0, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:07:00 [error] 65879#0: *59 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:07:01 [error] 65879#0: *60 [lua] rewrite_by_lua(nginx.conf:42):36: decode(): decrypted_text==>0.0.0.0, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:07:01 [error] 65879#0: *60 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:07:02 [error] 65879#0: *61 [lua] rewrite_by_lua(nginx.conf:42):36: decode(): decrypted_text==>0.0.0.0, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:07:02 [error] 65879#0: *61 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:07:02 [error] 65879#0: *62 [lua] rewrite_by_lua(nginx.conf:42):36: decode(): decrypted_text==>0.0.0.0, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:07:02 [error] 65879#0: *62 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:07:19 [error] 66246#0: *63 [lua] rewrite_by_lua(nginx.conf:42):36: decode(): decrypted_text==>7080, client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:07:19 [error] 66246#0: *63 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:13:14 [error] 69391#0: *1 invalid port in upstream "0.0.0.0:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:13:48 [error] 69391#0: *2 invalid port in upstream "127.0.0.1:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "3fafc4c50e97eba637b6667aff9707a0.service.com:9980"
+2023/10/01 12:13:57 [error] 69391#0: *3 invalid port in upstream "127.0.0.1:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "3fafc4c50e97eba637b6667aff9707a0.service.com:9980"
+2023/10/01 12:17:01 [error] 72279#0: *4 invalid port in upstream "localhost:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"
+2023/10/01 12:17:41 [error] 72719#0: *5 invalid port in upstream "localhost:7080", client: 127.0.0.1, server: , request: "GET /echo HTTP/1.1", host: "7a4fe220e12bb0c3fb971e69ac41844b.service.com:9980"

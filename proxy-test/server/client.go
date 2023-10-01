@@ -34,6 +34,7 @@ func RunClient(waitClientEnd *sync.WaitGroup, clientId int, appHost string, TUNN
 	done := make(chan struct{})
 	waitSendRecieveMessageMap := &sync.WaitGroup{}
 	waitSendRecieveMessageMap.Add(1)
+
 	go func(waitSendRecieveMessageMap *sync.WaitGroup) {
 		defer close(done)
 		defer waitSendRecieveMessageMap.Done()
@@ -43,6 +44,7 @@ func RunClient(waitClientEnd *sync.WaitGroup, clientId int, appHost string, TUNN
 				return
 			}
 			recvCount++
+			// fmt.Println("recvCount:", recvCount)
 			if recvCount >= NUM_REPEAT && sendCount >= NUM_REPEAT {
 				return
 			}
@@ -62,6 +64,7 @@ func RunClient(waitClientEnd *sync.WaitGroup, clientId int, appHost string, TUNN
 			data := make([]byte, PACKET_SIZE)
 			err := c.WriteMessage(websocket.BinaryMessage, data)
 			sendCount++
+			// fmt.Println("sendCount:", sendCount)
 			if err != nil {
 				fmt.Println("write:", err)
 				return

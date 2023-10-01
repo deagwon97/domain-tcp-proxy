@@ -27,6 +27,8 @@ func run(
 ) {
 	waitWebSocketServerReady := &sync.WaitGroup{}
 
+	// fmt.Println("start test")
+
 	//	run servers
 	waitWebSocketServerReady.Add(NUM_OF_SERVER)
 	for i := 0; i < NUM_OF_SERVER; i++ {
@@ -50,6 +52,7 @@ func run(
 	for nc := 0; nc < NUM_OF_CLIENT; nc++ {
 		for ns := 0; ns < NUM_OF_SERVER; ns++ {
 			appHost := fmt.Sprintf("0.0.0.0:%d", APP_BASE_PORT+ns)
+			// fmt.Println("run client")
 			go server.RunClient(waitAllClientsEnd, ns+1, appHost, TUNNEL_HOST_POSTFIX, NUM_REPEAT, PACKET_SIZE)
 		}
 	}

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+go build .
 
 server_range=(250 500 750 1000 1250 1500 1750 2000 2250 2500 2750 3000)
 client_range=(1)

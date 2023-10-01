@@ -62,9 +62,10 @@ func (s *Server) run(listener *net.TCPListener) {
 			appHost := lib.ParseAppHost(userReqeust)
 
 			// recover http reqeust bytes data to io.Reader
-			userRequestBuf := bytes.NewBuffer([]byte{})
 			userRequestBytes, _ := httputil.DumpRequest(userReqeust, true)
+			userRequestBuf := bytes.NewBuffer([]byte{})
 			userRequestBuf.Write(userRequestBytes)
+
 			// combine http reqeust data io.Reader and userConn io.Reader
 			userBuf := io.MultiReader(userRequestBuf, userConn)
 			appConn, _ := net.Dial("tcp", appHost)

@@ -11,6 +11,12 @@ import (
 	"golang.org/x/crypto/blowfish"
 )
 
+func PKCS5UnPadding(origData []byte) []byte {
+	length := len(origData)
+	unpadding := int(origData[length-1])
+	return origData[:(length - unpadding)]
+}
+
 func decryptSubdomain(subDomain string) (host string, err error) {
 	key := []byte("thisissecretkey")
 	ciphertext, err := hex.DecodeString(subDomain)
@@ -28,11 +34,7 @@ func decryptSubdomain(subDomain string) (host string, err error) {
 	host = string(plaintext)
 	return host, err
 }
-func PKCS5UnPadding(origData []byte) []byte {
-	length := len(origData)
-	unpadding := int(origData[length-1])
-	return origData[:(length - unpadding)]
-}
+
 
 func PKCS5Padding(ciphertext []byte, blockSize int) []byte {
 	padding := blockSize - len(ciphertext)%blockSize
