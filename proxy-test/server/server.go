@@ -43,6 +43,5 @@ func RunServer(waitWebSocketServerReady *sync.WaitGroup, host string) {
 	mux.HandleFunc("/echo", echoServer)
 	listener, _ := net.Listen("tcp", host)
 	waitWebSocketServerReady.Done()
-	// fmt.Println("Starting server ", host)
 	http.Serve(listener, mux)
 }

@@ -23,6 +23,7 @@
                 "golang.go"
             ],
             "settings": {
+                "remote.containers.forwardPortsOnStart": false,
                 "eslint.nodePath": "/workdir/web/.yarn/sdks",
                 "prettier.prettierPath": "/workdir/web/node_modules/prettier",
                 "typescript.tsdk": "/workdir/web/.yarn/sdks/typescript/lib",

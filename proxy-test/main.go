@@ -11,8 +11,9 @@ import (
 )
 
 const (
-	APP_BASE_PORT       = 7080
+	APP_BASE_PORT       = 13001
 	TUNNEL_HOST_POSTFIX = ".service.com"
+	MID_SERVER_PORT     = 9980
 )
 
 type Response struct {
@@ -23,7 +24,7 @@ func run(
 	NUM_OF_SERVER int,
 	NUM_OF_CLIENT int,
 	NUM_REPEAT int,
-	PACKET_SIZE int,
+	DATA_SIZE int,
 ) {
 	waitWebSocketServerReady := &sync.WaitGroup{}
 
@@ -42,30 +43,33 @@ func run(
 	// wait for all servers ready
 	waitWebSocketServerReady.Wait()
 
-	//time start
-	startAt := time.Now()
-	// run clients
 	waitAllClientsEnd := &sync.WaitGroup{}
 	waitAllClientsEnd.Add(NUM_OF_CLIENT * NUM_OF_SERVER)
+	startAt := time.Now()
 	for nc := 0; nc < NUM_OF_CLIENT; nc++ {
 		for ns := 0; ns < NUM_OF_SERVER; ns++ {
 			appHost := fmt.Sprintf("0.0.0.0:%d", APP_BASE_PORT+ns)
-			go server.RunClient(waitAllClientsEnd, ns+1, appHost, TUNNEL_HOST_POSTFIX, NUM_REPEAT, PACKET_SIZE)
+			go server.RunClient(waitAllClientsEnd,
+				ns+1,
+				MID_SERVER_PORT,
+				appHost,
+				TUNNEL_HOST_POSTFIX,
+				NUM_REPEAT,
+				DATA_SIZE,
+			)
 		}
 	}
-	// wait for all test end
-	waitAllClientsEnd.Wait()
-	// time end
-	endAt := time.Now()
-	delta := endAt.Sub(startAt)
-	fmt.Printf("%d, %d, %d, %d, %f \n", NUM_OF_SERVER, NUM_OF_CLIENT, NUM_REPEAT, PACKET_SIZE, delta.Seconds())
 
+	waitAllClientsEnd.Wait()
+	endAt := time.Now()
+	duration := endAt.Sub(startAt).Seconds()
+	fmt.Printf("%d, %d, %d, %d, %f \n", NUM_OF_SERVER, NUM_OF_CLIENT, NUM_REPEAT, DATA_SIZE, duration)
 }
 
 func main() {
 	NUM_OF_SERVER, _ := strconv.Atoi(os.Args[1])
 	NUM_OF_CLIENT, _ := strconv.Atoi(os.Args[2])
 	NUM_REPEAT, _ := strconv.Atoi(os.Args[3])
-	PACKET_SIZE, _ := strconv.Atoi(os.Args[4])
-	run(NUM_OF_SERVER, NUM_OF_CLIENT, NUM_REPEAT, PACKET_SIZE)
+	DATA_SIZE, _ := strconv.Atoi(os.Args[4])
+	run(NUM_OF_SERVER, NUM_OF_CLIENT, NUM_REPEAT, DATA_SIZE)
 }
