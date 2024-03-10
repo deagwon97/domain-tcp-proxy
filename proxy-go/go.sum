@@ -1,6 +1,9 @@
 github.com/andreburgaud/crypt2go v1.3.1 h1:v5gWSnSiGTYrsC8CmwHapd8ykgJUurvV7hRRN+cGyHY=
 github.com/andreburgaud/crypt2go v1.3.1/go.mod h1:JBP/1ZhSVBoJZXxQWCLSsBlD2HwrN0u//ChSxQxt72o=
+<<<<<<< HEAD
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
+=======
+>>>>>>> e4ea4cf (update)
 golang.org/x/crypto v0.11.0 h1:6Ewdq3tDic1mg5xRO4milcWCfMVQhI4NkqWWvqejpuA=
 golang.org/x/crypto v0.11.0/go.mod h1:xgJhtzW8F9jGdVFWZESrid1U1bjeNy4zgy5cRr/CIio=
